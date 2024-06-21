@@ -1,26 +1,22 @@
 
-public class Triangulo implements FiguraGeometrica {
+public class Romboide implements FiguraGeometrica{
 	private String nombre;
 	private double base;
 	private double altura;
-	private double lado;
-	public Triangulo(String nombre, double base, double altura, double lado) {
+	public Romboide(String nombre, double base, double altura) {
 		super();
 		this.nombre = nombre;
 		this.base = base;
 		this.altura = altura;
-		this.lado = lado;
 	}//Constructor
 	
 	public double calcularArea() {
-		return (base*altura)/2;
-	}//calcularArea
+		return(base*altura);
+	}//caluclarArea
 	
 	public double calcularPerimetro() {
-		return (lado+lado+lado);
-	}//calcularPerimetro
-	
-	
+		return(base*4 + altura*2);
+	}
 	
 	public String getNombre() {
 		return nombre;
@@ -39,22 +35,16 @@ public class Triangulo implements FiguraGeometrica {
 	}
 	public void setAltura(double altura) {
 		this.altura = altura;
-	}
-	public double getLado() {
-		return lado;
-	}
-	public void setLado(double lado) {
-		this.lado = lado;
-		
-	}//getters and setters
-	
+	}//Get and Set
 	@Override
 	public String toString() {
-		return "Triangulo [nombre=" + nombre + ", base=" + base + ", altura=" + altura + ", lado=" + lado + "]";
+		return "Romboide [nombre=" + nombre + ", base=" + base + ", altura=" + altura + "]";
 	}//toString
 	
 	
 	
-
 	
-}//class Triangulo
+	
+	
+	
+}//classRomboide
